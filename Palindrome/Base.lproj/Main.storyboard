@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Palindrome Verifier" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-wa-YWP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="kq4-rS-jDb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwk-Jd-Co4">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="RZF-lq-bMu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBu-6H-ZWg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cfg-ks-7rv"/>
+                                    <constraint firstAttribute="width" constant="63" id="eHf-Ly-yik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Verify">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="verifyPalindrome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Opt-AG-gWJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-xi-ceC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="rLm-UR-sSc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.41960784309999999" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Il2-xi-ceC" firstAttribute="centerX" secondItem="sBu-6H-ZWg" secondAttribute="centerX" id="1EB-Sq-5TD"/>
+                            <constraint firstItem="Il2-xi-ceC" firstAttribute="top" secondItem="sBu-6H-ZWg" secondAttribute="bottom" constant="38" id="9Rm-YC-01a"/>
+                            <constraint firstItem="dwk-Jd-Co4" firstAttribute="top" secondItem="QZd-wa-YWP" secondAttribute="bottom" constant="66" id="MWT-yo-tMD"/>
+                            <constraint firstItem="QZd-wa-YWP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="U9O-xr-LRz"/>
+                            <constraint firstItem="sBu-6H-ZWg" firstAttribute="top" secondItem="dwk-Jd-Co4" secondAttribute="bottom" constant="81" id="WqP-fc-wMV"/>
+                            <constraint firstItem="dwk-Jd-Co4" firstAttribute="centerX" secondItem="QZd-wa-YWP" secondAttribute="centerX" id="eU1-5A-yby"/>
+                            <constraint firstItem="sBu-6H-ZWg" firstAttribute="centerX" secondItem="dwk-Jd-Co4" secondAttribute="centerX" id="gw2-vX-8ty"/>
+                            <constraint firstItem="QZd-wa-YWP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h8B-TY-qbV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPalindrome" destination="Il2-xi-ceC" id="apc-tj-lm7"/>
+                        <outlet property="detectString" destination="dwk-Jd-Co4" id="AA0-5O-8Wx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
